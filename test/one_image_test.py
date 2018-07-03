@@ -17,7 +17,9 @@ slide_window = False
 shuffle = False
 detectors = [None, None, None]
 prefix = ['../data/MTCNN_model/PNet_landmark/PNet', '../data/MTCNN_model/RNet_landmark/RNet', '../data/MTCNN_model/ONet_landmark/ONet']
-epoch = [18, 14, 16]
+# epoch = [18, 14, 16] 
+# The above is original pre-trained model parameters
+epoch = [30, 18, 6]
 batch_size = [2048, 256, 16]
 model_path = ['%s-%s' % (x, y) for x, y in zip(prefix, epoch)]
 # load pnet model
@@ -67,9 +69,10 @@ if __name__ == '__main__':
                 cv2.circle(image, (int(landmark[2*i]),int(int(landmark[2*i+1]))), 3, (0,0,255))
 
         count = count + 1
-        #cv2.imwrite("result_landmark/%d.png" %(count),image)
-        #cv2.imshow("lala",image)
-        #cv2.waitKey(0)    
+        # Output the result
+        cv2.imwrite("result_landmark/%d.png" %(count),image)
+        cv2.imshow("lala",image)
+        cv2.waitKey(0)    
         cv2.imwrite(str(count) + '.jpg', image)
 
 '''

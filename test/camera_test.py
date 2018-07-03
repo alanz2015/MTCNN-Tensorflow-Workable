@@ -17,7 +17,9 @@ shuffle = False
 #vis = True
 detectors = [None, None, None]
 prefix = ['../data/MTCNN_model/PNet_landmark/PNet', '../data/MTCNN_model/RNet_landmark/RNet', '../data/MTCNN_model/ONet_landmark/ONet']
-epoch = [18, 14, 16]
+# epoch = [18, 14, 16] 
+# The above is original pre-trained model parameters
+epoch = [30, 18, 6]
 model_path = ['%s-%s' % (x, y) for x, y in zip(prefix, epoch)]
 PNet = FcnDetector(P_Net, model_path[0])
 detectors[0] = PNet
@@ -25,13 +27,16 @@ RNet = Detector(R_Net, 24, 1, model_path[1])
 detectors[1] = RNet
 ONet = Detector(O_Net, 48, 1, model_path[2])
 detectors[2] = ONet
-videopath = "./video_test.avi"
+# videopath = "./video_test.avi"
+videopath = "/dev/video0"
 mtcnn_detector = MtcnnDetector(detectors=detectors, min_face_size=min_face_size,
                                stride=stride, threshold=thresh, slide_window=slide_window)
 
 video_capture = cv2.VideoCapture(videopath)
-video_capture.set(3, 340)
-video_capture.set(4, 480)
+# video_capture.set(3, 340)
+# video_capture.set(4, 480)
+video_capture.set(3, 1120)
+video_capture.set(4, 1420)
 corpbbox = None
 while True:
     # fps = video_capture.get(cv2.CAP_PROP_FPS)
