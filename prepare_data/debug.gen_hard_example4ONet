@@ -1,0 +1,317 @@
+2018-06-27 13:08:46.017065: I tensorflow/core/platform/cpu_feature_guard.cc:140] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 AVX512F FMA
+2018-06-27 13:08:46.783862: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1356] Found device 0 with properties: 
+name: Graphics Device major: 7 minor: 0 memoryClockRate(GHz): 1.455
+pciBusID: 0000:2d:00.0
+totalMemory: 11.75GiB freeMemory: 10.05GiB
+2018-06-27 13:08:47.450163: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1356] Found device 1 with properties: 
+name: Graphics Device major: 7 minor: 0 memoryClockRate(GHz): 1.455
+pciBusID: 0000:99:00.0
+totalMemory: 11.78GiB freeMemory: 11.35GiB
+2018-06-27 13:08:47.451288: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1435] Adding visible gpu devices: 0, 1
+2018-06-27 13:08:48.051221: I tensorflow/core/common_runtime/gpu/gpu_device.cc:923] Device interconnect StreamExecutor with strength 1 edge matrix:
+2018-06-27 13:08:48.051259: I tensorflow/core/common_runtime/gpu/gpu_device.cc:929]      0 1 
+2018-06-27 13:08:48.051265: I tensorflow/core/common_runtime/gpu/gpu_device.cc:942] 0:   N Y 
+2018-06-27 13:08:48.051269: I tensorflow/core/common_runtime/gpu/gpu_device.cc:942] 1:   Y N 
+2018-06-27 13:08:48.051601: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1053] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 9703 MB memory) -> physical GPU (device: 0, name: Graphics Device, pci bus id: 0000:2d:00.0, compute capability: 7.0)
+2018-06-27 13:08:48.052199: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1053] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:1 with 10968 MB memory) -> physical GPU (device: 1, name: Graphics Device, pci bus id: 0000:99:00.0, compute capability: 7.0)
+2018-06-27 13:08:48.152725: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1435] Adding visible gpu devices: 0, 1
+2018-06-27 13:08:48.152795: I tensorflow/core/common_runtime/gpu/gpu_device.cc:923] Device interconnect StreamExecutor with strength 1 edge matrix:
+2018-06-27 13:08:48.152801: I tensorflow/core/common_runtime/gpu/gpu_device.cc:929]      0 1 
+2018-06-27 13:08:48.152806: I tensorflow/core/common_runtime/gpu/gpu_device.cc:942] 0:   N Y 
+2018-06-27 13:08:48.152810: I tensorflow/core/common_runtime/gpu/gpu_device.cc:942] 1:   Y N 
+2018-06-27 13:08:48.153079: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1053] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 9703 MB memory) -> physical GPU (device: 0, name: Graphics Device, pci bus id: 0000:2d:00.0, compute capability: 7.0)
+2018-06-27 13:08:48.153175: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1053] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:1 with 10968 MB memory) -> physical GPU (device: 1, name: Graphics Device, pci bus id: 0000:99:00.0, compute capability: 7.0)
+Called with argument:
+Namespace(batch_size=[2048, 256, 16], epoch=[18, 14, 22], min_face=24, prefix=['../data/MTCNN_model/PNet_landmark/PNet', '../data/MTCNN_model/RNet_landmark/RNet', '../data/MTCNN_model/ONet/ONet'], shuffle=False, slide_window=False, stride=2, test_mode='RNet', thresh=[0.4, 0.05, 0.7])
+Test model:  RNet
+../data/MTCNN_model/PNet_landmark/PNet-18
+(1, ?, ?, 3)
+(1, ?, ?, 10)
+(1, ?, ?, 10)
+(1, ?, ?, 16)
+(1, ?, ?, 32)
+(1, ?, ?, 2)
+(1, ?, ?, 4)
+(1, ?, ?, 10)
+../data/MTCNN_model/PNet_landmark/PNet-18
+restore models' param
+================================== RNet
+(256, 24, 24, 3)
+(256, 22, 22, 28)
+(256, 11, 11, 28)
+(256, 9, 9, 48)
+(256, 4, 4, 48)
+(256, 3, 3, 64)
+(256, 576)
+(256, 128)
+(256, 2)
+(256, 4)
+(256, 10)
+../data/MTCNN_model/RNet_landmark/RNet-14
+restore models' param
+==================================
+0 images done
+100 images done
+200 images done
+300 images done
+400 images done
+500 images done
+600 images done
+700 images done
+800 images done
+900 images done
+1000 images done
+1100 images done
+1200 images done
+1300 images done
+1400 images done
+1500 images done
+1600 images done
+1700 images done
+1800 images done
+1900 images done
+2000 images done
+2100 images done
+2200 images done
+2300 images done
+2400 images done
+2500 images done
+2600 images done
+2700 images done
+2800 images done
+2900 images done
+3000 images done
+3100 images done
+3200 images done
+3300 images done
+3400 images done
+3500 images done
+3600 images done
+3700 images done
+3800 images done
+3900 images done
+4000 images done
+4100 images done
+4200 images done
+4300 images done
+4400 images done
+4500 images done
+4600 images done
+4700 images done
+4800 images done
+4900 images done
+5000 images done
+5100 images done
+5200 images done
+5300 images done
+5400 images done
+5500 images done
+5600 images done
+5700 images done
+5800 images done
+5900 images done
+6000 images done
+6100 images done
+6200 images done
+6300 images done
+6400 images done
+6500 images done
+6600 images done
+6700 images done
+6800 images done
+6900 images done
+7000 images done
+7100 images done
+7200 images done
+7300 images done
+7400 images done
+7500 images done
+7600 images done
+7700 images done
+7800 images done
+7900 images done
+8000 images done
+8100 images done
+8200 images done
+8300 images done
+8400 images done
+boxes_c is None...
+8500 images done
+boxes_c is None...
+8600 images done
+8700 images done
+8800 images done
+8900 images done
+9000 images done
+9100 images done
+9200 images done
+9300 images done
+9400 images done
+9500 images done
+9600 images done
+9700 images done
+9800 images done
+9900 images done
+10000 images done
+10100 images done
+10200 images done
+10300 images done
+10400 images done
+10500 images done
+10600 images done
+10700 images done
+10800 images done
+10900 images done
+11000 images done
+11100 images done
+11200 images done
+11300 images done
+11400 images done
+11500 images done
+11600 images done
+11700 images done
+11800 images done
+11900 images done
+12000 images done
+12100 images done
+12200 images done
+12300 images done
+12400 images done
+12500 images done
+12600 images done
+12700 images done
+12800 images done
+48/ONet
+48测试完成开始OHEM
+processing 12880 images in total
+12880
+12880
+0 images done
+100 images done
+200 images done
+300 images done
+400 images done
+500 images done
+600 images done
+700 images done
+800 images done
+900 images done
+1000 images done
+1100 images done
+1200 images done
+1300 images done
+1400 images done
+1500 images done
+1600 images done
+1700 images done
+1800 images done
+1900 images done
+2000 images done
+2100 images done
+2200 images done
+2300 images done
+2400 images done
+2500 images done
+2600 images done
+2700 images done
+2800 images done
+2900 images done
+3000 images done
+3100 images done
+3200 images done
+3300 images done
+3400 images done
+3500 images done
+3600 images done
+3700 images done
+3800 images done
+3900 images done
+4000 images done
+4100 images done
+4200 images done
+4300 images done
+4400 images done
+4500 images done
+4600 images done
+4700 images done
+4800 images done
+4900 images done
+5000 images done
+5100 images done
+5200 images done
+5300 images done
+5400 images done
+5500 images done
+5600 images done
+5700 images done
+5800 images done
+5900 images done
+6000 images done
+6100 images done
+6200 images done
+6300 images done
+6400 images done
+6500 images done
+6600 images done
+6700 images done
+6800 images done
+6900 images done
+7000 images done
+7100 images done
+7200 images done
+7300 images done
+7400 images done
+7500 images done
+7600 images done
+7700 images done
+7800 images done
+7900 images done
+8000 images done
+8100 images done
+8200 images done
+8300 images done
+8400 images done
+8500 images done
+8600 images done
+8700 images done
+8800 images done
+8900 images done
+9000 images done
+9100 images done
+9200 images done
+9300 images done
+9400 images done
+9500 images done
+9600 images done
+9700 images done
+9800 images done
+9900 images done
+10000 images done
+10100 images done
+10200 images done
+10300 images done
+10400 images done
+10500 images done
+10600 images done
+10700 images done
+10800 images done
+10900 images done
+11000 images done
+11100 images done
+11200 images done
+11300 images done
+11400 images done
+11500 images done
+11600 images done
+11700 images done
+11800 images done
+11900 images done
+12000 images done
+12100 images done
+12200 images done
+12300 images done
+12400 images done
+12500 images done
+12600 images done
+12700 images done
+12800 images done
