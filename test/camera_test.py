@@ -19,7 +19,7 @@ detectors = [None, None, None]
 prefix = ['../data/MTCNN_model/PNet_landmark/PNet', '../data/MTCNN_model/RNet_landmark/RNet', '../data/MTCNN_model/ONet_landmark/ONet']
 # epoch = [18, 14, 16] 
 # The above is original pre-trained model parameters
-epoch = [30, 18, 6]
+epoch = [30, 18, 22]
 model_path = ['%s-%s' % (x, y) for x, y in zip(prefix, epoch)]
 PNet = FcnDetector(P_Net, model_path[0])
 detectors[0] = PNet
